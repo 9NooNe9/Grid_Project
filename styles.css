@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Adobe Clean UX', sans-serif;
+}
+
+.container {
+    width: fit-content;
+    display: grid;
+    border-radius: 0.3rem;
+    grid-template-rows: 60vh 32.5vh 32.5vh;
+    grid-template-columns: 28vw 32vw 32vw;
+    grid-template-areas: "sidebar header header"
+                         "sidebar main main"
+                         "sidebar main main";
+}
+
+.sidebar {
+    background: whitesmoke;
+    grid-area: sidebar;
+    padding: 20px 0 0 15px;
+    margin: 0.6rem;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a3a62;
+    text-decoration: none;
+}
+
+.work {
+    font-weight: bold;
+    color: #1a3a62;
+    text-decoration: none;
+}
+
+.title {
+    color: #1a3a62;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.list ul {
+    list-style: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.contact {
+    font-weight: bold;
+    text-decoration: none;
+    color: #1a3a62;
+}
+
+.icons {
+    margin-top: 1rem;
+}
+
+
+.header {
+
+    width: 100%;
+    background-color: #f7f8fa;
+    font-size: 1.2rem;
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header p {
+    color: #010f3f;
+    font-size: 1rem;
+    width: 70%;
+}
+
+.header h4 {
+    font-size: 0.7rem;
+    margin-top: 20px;
+    color: #a9b6c0;
+}
+
+.gallery {
+    grid-area: main;
+    display: grid;
+    grid-template: repeat(2, 50fr) / repeat(2, 50fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.gallery img {
+    width: 32vw;
+    height: 32vh;
+}
+
+@media screen and (max-width: 900px) {
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery img {
+        width: 64vw;
+        height: 64vw;
+    }
+
+    .sidebar {
+        margin: 0;
+        padding: 20px 5px;
+    }
+
+    .sidebar ul {
+        padding: 10px 0;
+    }
+
+    .sidebar ul li {
+        margin-top: 5px;
+    }
+
+    .name {
+        font-size: 1.8rem;
+    }
+}
